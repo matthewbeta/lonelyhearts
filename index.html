@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+ 	<title>Github Lonely Hearts</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="wrap">
+
+	<header class="header-main" role="banner">
+		
+		<h1 class="page-title">♥ Github Lonely Hearts ♥</h1>
+		<p>Repos seeking designers, for friendship, forking and maybe more&hellip;</p>
+
+	</header>
+
+	<section id="results"></section>
+	
+</div>
+
+<script type="text/javascript" src="js/ICanHaz.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/tabletop.js"></script>
+<script type="text/javascript" src="js/sheetsee.js"></script>
+
+<script id="results" type="text/html">
+    <ul class="results-list cf">
+      {{#rows}} 
+        <li class="result">
+			<a href="{{githuburl}}"><h2 class="repo-name">{{name}}</h2></a>
+			<p class="owner">{{owner}}</p>
+			<div class="comments">{{comments}}</div>
+			
+			<p><span class="label">Clone URL:</span> {{cloneurl}}</p>
+			
+			<a class="contact twitter" href="http://twitter.com/{{twitter}}">@{{twitter}}</a>
+			<a class="contact email" href="mailto:{{email}}">{{email}}</a>
+
+		</li>
+      {{/rows}} 
+  	</ul>
+</script>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+  	var gData
+  	var URL = "0AuP7bQyTwVeFdEp0OTV5WUxQZ2x3aWNOOEtfSGRhWlE"
+		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } ) 
+	function showInfo(data) {
+	    gData = data
+		console.log(gData)
+		Sheetsee.makeTable(gData, "#results")    
+	  }
+	}) 
+  	
+</script>
+
+
+
+</body>
+</html>
