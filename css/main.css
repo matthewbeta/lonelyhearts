@@ -43,10 +43,13 @@ body {
 }
 .mini-heart:after {
   content: url(../images/heart-mini.gif);
-  
+
 }
 a {
   color: #AF273C;
+}
+img {
+  max-width: 100%;
 }
 .wrap {
   max-width: 60em;
@@ -68,10 +71,9 @@ a {
 }
 .result {
   display: block;
-  float: left;
-  width: 100%;
+  width: 90%;
   padding: 2em;
-  margin-bottom: 4em;
+  margin: 0 auto 4em;
   background-color: #fff;
   color: #999;
   border-radius: .2em;
@@ -104,17 +106,20 @@ color: #999;
 .contact {
   padding-left: 1em;
 }
-.comments {
-  width: 66%;
-  float: left;
-  padding-right: 1em;
+@media all and (min-width: 600px) {
+  .comments {
+    width: 66%;
+    float: left;
+    padding-right: 1em;
+  }
+  .actions {
+    width: 33%;
+    float: right;
+    padding-left: 1em;
+      border-left: 1px solid #DDD;
+  }
 }
-.actions {
-  width: 33%;
-  float: right;
-  padding-left: 1em;
-    border-left: 1px solid #DDD;
-}
+
 
 
 .footer-main {

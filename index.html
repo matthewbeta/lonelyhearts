@@ -42,7 +42,7 @@
 <script id="results" type="text/html">
     <ul class="results-list cf">
       {{#rows}} 
-			<li class="result">
+			<li class="result cf">
 	<h2 class="repo-name"><a href="{{githuburl}}">{{name}}</a></h2>
 	
 	<div class="comments">
@@ -73,7 +73,7 @@
   	var URL = "0AuP7bQyTwVeFdEp0OTV5WUxQZ2x3aWNOOEtfSGRhWlE"
 		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } ) 
 	function showInfo(data) {
-	    gData = data
+	    gData = data.reverse()
 		console.log(gData)
 		Sheetsee.makeTable(gData, "#results")    
 	  }
