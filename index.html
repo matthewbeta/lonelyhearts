@@ -29,7 +29,7 @@
 	<section id="results"></section>
 
 	<footer class="footer-main">
-		 <p>&copy; 2013 | Released under the MIT License | Proudly hosted on <a href="https://github.com/matthewbeta/lonelyhearts">Github</a> | A side project by <a href="http://matthew-jackson.com">matthewbeta</a></p>
+		 <p>&copy; 2013 | Released under the MIT License | Proudly hosted on <a href="https://github.com/matthewbeta/lonelyhearts">Github</a> | A side project by <a href="http://matthew-jackson.com">matt</a></p>
 
 	</footer>
 	
@@ -41,16 +41,16 @@
 <script type="text/javascript" src="js/sheetsee.js"></script>
 
 <script id="results" type="text/html">
-    <ul class="results-list cf">
+    <ul class="results-list">
       {{#rows}} 
 			<li class="result cf">
 	<h2 class="repo-name"><a href="{{githuburl}}">{{name}}</a></h2>
 	
 	<div class="comments">
-		<p class="date">{{date}}</p>
+		<p class="date">Added on {{date}}</p>
 		<p>{{comments}}</p>
 
-		<p><a href="{{githuburl}}">View on Github</a></p>
+		<p class="view-gh"><a href="{{githuburl}}">View on Github</a></p>
 
 	</div>
 	
