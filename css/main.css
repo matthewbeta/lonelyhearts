@@ -114,8 +114,7 @@ ul {
 .label {
   display: block;
   font-style: italic;
-  font-size: .8em;
-  font-weight: 600;
+  /*font-size: .8em;*/
   color: #AAA;
 }
 input[type="text"] {
@@ -123,7 +122,7 @@ input[type="text"] {
 font-size: .8em;
 border: 1px solid #DDD;
 padding: .4em;
-color: #999;
+color: #333;
 }
 .contact {
   padding-left: 1em;
@@ -133,12 +132,12 @@ color: #999;
     width: 66%;
     float: left;
     padding-right: 1em;
+      border-right: 1px solid #DDD;
   }
   .actions {
     width: 33%;
     float: right;
     padding-left: 1em;
-      border-left: 1px solid #DDD;
   }
 }
 
