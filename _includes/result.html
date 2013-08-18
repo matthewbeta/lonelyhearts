@@ -1,11 +1,21 @@
 <li class="result">
-	<a href="{{githuburl}}"><h2 class="repo-name">{{name}}</h2></a>
-	<p class="owner">{{owner}}</p>
-	<div class="comments">{{comments}}</div>
+	<h2 class="repo-name"><a href="{{githuburl}}">{{name}}</a></h2>
 	
-	<p>Clone URL: {{cloneurl}}</p>
-	
-	<a class="contact twitter" href="http://twitter.com/{{twitter}}">@{{twitter}}</a>
-	<a class="contact email" href="mailto:{{email}}">{{email}}</a>
+	<div class="comments">
+		<p class="date">Added on {{date}}</p>
+		<p>{{comments}}</p>
 
+		<p><a href="{{githuburl}}">View on Github</a></p>
+
+	</div>
+	
+	<div class="actions">
+		<p><i class="icon-github"></i> <a class="contact owner" href="http://github.com/{{owner}}">{{owner}}</a></p>
+		<p><i class="icon-twitter"></i> <a class="contact twitter" href="http://twitter.com/{{twitter}}">@{{twitter}}</a></p>
+		<p><i class="icon-quill"></i> <a class="contact email" href="mailto:{{email}}">{{email}}</a></p>
+
+		
+		<label for="{{cloneurl}}" class="label">Clone URL:</label> 
+		<input id="{{cloneurl}}" type="text" readonly="" value="{{cloneurl}}">
+	</div>
 </li>

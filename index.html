@@ -11,17 +11,25 @@
 </head>
 
 <body>
-
+<div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/matthewbeta/lonelyhearts">Fork me on GitHub</a>
+    </div>
+</div>
 <div class="wrap">
 
 	<header class="header-main" role="banner">
-		
-		<h1 class="page-title">♥ Github Lonely Hearts ♥</h1>
-		<p>Repos seeking designers, for friendship, forking and maybe more&hellip;</p>
+		<h1 class="page-title"> Github Lonely Hearts </h1>
+		<p>Repos seeking designers, for friendship, forking and maybe more&hellip; ♥</p>
 
 	</header>
 
 	<section id="results"></section>
+
+	<footer class="footer-main">
+		 <p>&copy; 2013 | MIT Licensed | <a href="https://github.com/matthewbeta/lonelyhearts">View on Github</a> | A side project by <a href="http://matthew-jackson.com">matthewbeta</a></p>
+
+	</footer>
 	
 </div>
 
@@ -33,17 +41,27 @@
 <script id="results" type="text/html">
     <ul class="results-list cf">
       {{#rows}} 
-        <li class="result">
-			<a href="{{githuburl}}"><h2 class="repo-name">{{name}}</h2></a>
-			<p class="owner">{{owner}}</p>
-			<div class="comments">{{comments}}</div>
-			
-			<p><span class="label">Clone URL:</span> {{cloneurl}}</p>
-			
-			<a class="contact twitter" href="http://twitter.com/{{twitter}}">@{{twitter}}</a>
-			<a class="contact email" href="mailto:{{email}}">{{email}}</a>
+			<li class="result">
+	<h2 class="repo-name"><a href="{{githuburl}}">{{name}}</a></h2>
+	
+	<div class="comments">
+		<p class="date">{{date}}</p>
+		<p>{{comments}}</p>
 
-		</li>
+		<p><a href="{{githuburl}}">View on Github</a></p>
+
+	</div>
+	
+	<div class="actions">
+		<p><i class="icon-github"></i> <a class="contact owner" href="http://github.com/{{owner}}">{{owner}}</a></p>
+		<p><i class="icon-twitter"></i> <a class="contact twitter" href="http://twitter.com/{{twitter}}">@{{twitter}}</a></p>
+		<p><i class="icon-quill"></i> <a class="contact email" href="mailto:{{email}}">{{email}}</a></p>
+
+		
+		<label for="{{cloneurl}}" class="label">Clone URL:</label> 
+		<input id="{{cloneurl}}" type="text" readonly="" value="{{cloneurl}}">
+	</div>
+</li>
       {{/rows}} 
   	</ul>
 </script>

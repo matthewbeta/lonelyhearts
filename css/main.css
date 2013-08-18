@@ -1,30 +1,212 @@
 body {
-  background-color: #fcfcfc;
+  background-color: #FC516C;
+  color: #fefefe;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
+.icon-github, .icon-heart, .icon-lovers, .icon-twitter, .icon-quill, .icon-fork {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-github:before {
+  content: "\e000";
+}
+.icon-heart:before {
+  content: "\e001";
+}
+.icon-lovers:before {
+  content: "\e002";
+}
+.icon-twitter:before {
+  content: "\e003";
+}
+.icon-quill:before {
+  content: "\e004";
+}
+.icon-fork:before {
+  content: "\e005";
+}
+a {
+  color: #AF273C;
+}
 .wrap {
   max-width: 60em;
   margin: 0 auto;
 }
 .header-main {
   text-align: center;
+  padding: 2em 1em;
+}
+.giant-icon {
+  display: block;
+  font-size: 5em;
 }
 .results-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 
 }
 .result {
+  display: block;
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 2em;
+  margin-bottom: 4em;
   background-color: #fff;
+  color: #999;
+  border-radius: .2em;
 }
+.repo-name {
+  font-weight: 300;
+  margin: 0 0 .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #DDD;
+  width: 100%;
+
+}
+.repo-name > a {
+  text-decoration: none;
+}
+.date ,
 .label {
   display: block;
   font-style: italic;
   font-size: .8em;
-  color: #DDD;
+  color: #AAA;
 }
+input[type="text"] {
+  width: 100%;
+font-size: .8em;
+border: 1px solid #DDD;
+padding: .4em;
+color: #999;
+}
+.contact {
+  padding-left: 1em;
+}
+.comments {
+  width: 66%;
+  float: left;
+  padding-right: 1em;
+}
+.actions {
+  width: 33%;
+  float: right;
+  padding-left: 1em;
+    border-left: 1px solid #DDD;
+}
+
+
+.footer-main {
+  border-top: 1px solid #AF273C;
+  padding: 2em 0 4em;
+}
+.footer-main a{
+  color: #fff;
+}
+
+/*Ribbon*/
+/* Left will inherit from right (so we don't need to duplicate code */
+.github-fork-ribbon {
+  /* The right and left lasses determine the side we attach our banner to */
+  position: absolute;
+
+  /* Add a bit of padding to give some substance outside the "stitching" */
+  padding: 2px 0;
+
+  /* Set the base colour */
+  background-color: #a00;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+}
+
+.github-fork-ribbon a,
+.github-fork-ribbon a:hover {
+  /* Set the font */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+
+  /* Set the text properties */
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0,0,0,0.5);
+  text-align: center;
+
+  /* Set the geometry. If you fiddle with these you'll also need to tweak the top and right values in #github-fork-ribbon. */
+  width: 200px;
+  line-height: 20px;
+
+  /* Set the layout properties */
+  display: inline-block;
+  padding: 2px 0;
+
+  /* Add "stitching" effect */
+  border-width: 1px 0;
+  border-style: dotted;
+  border-color: rgba(255,255,255,0.7);
+}
+
+.github-fork-ribbon-wrapper {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  z-index: 9999;
+}
+
+.github-fork-ribbon-wrapper.fixed {
+  position: fixed;
+}
+
+
+.github-fork-ribbon-wrapper.right {
+  right: 0;
+}
+
+
+.github-fork-ribbon-wrapper.right .github-fork-ribbon {
+  top: 42px;
+  right: -43px;
+
+  /* Rotate the banner 45 degrees */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
 
 /**
  * For modern browsers
