@@ -3,6 +3,8 @@ lonelyhearts
 
 Github repos seeking designers with GSOW (Good sense of white-space) for friendship, forking, maybe more
 
+http://matthew-jackson.com/lonelyhearts/
+
 ## The background
 
 I've often wanted to contribute design or HTML/CSS to an open source project but have struggled to find repos where thats being sought. After watching [@nrrrdcore](https://github.com/nrrrdcore) give an amazing talk at [HybridConf](http://hybridconf.net) I decided to build something to help put repo owners in touch with designers.
