@@ -42,7 +42,7 @@ summary {
  */
 
 html {
-    font-family: 'Open Sans', sans-serif; /* 1 */
+    font: normal 100%/1.6 'Open Sans', sans-serif; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
 }
