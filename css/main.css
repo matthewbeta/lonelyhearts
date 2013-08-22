@@ -207,6 +207,11 @@ ul .done {
   text-decoration: line-through;
 }
 
+.about-heart {
+  display: block;
+  margin: 1em auto 0;
+  max-width: 100px;
+}
 
 /**
  * For modern browsers
