@@ -77,7 +77,7 @@
   	var URL = "0AuP7bQyTwVeFdEp0OTV5WUxQZ2x3aWNOOEtfSGRhWlE"
 		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } ) 
 	function showInfo(data) {
-	    gData = data;
+	    gData = data.reverse();
 		
 		Sheetsee.makeTable(gData, "#results")    
 	  }
