@@ -17,8 +17,10 @@ To add your repo to the list, just create a new line on the googledoc, taking ca
 
 ## To dos
 
-- Make it look nice
+
 - Add some searching and filtering
-- Use a google form to submit a new repo
-- Set up a twitter account for it
-- Use IFTT to auto tweet when a new repo is added
+- Add a designer's looking for repos contact sheet/page
+- ~~Make it look nice~~
+- ~~Use a google form to submit a new repo~~
+- ~~Set up a twitter account for it~~
+- ~~Use IFTT to auto tweet when a new repo is added~~
